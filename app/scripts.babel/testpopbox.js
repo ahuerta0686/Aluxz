@@ -7,12 +7,9 @@ var templates = {
 function main() {
   loadTemplates()
   .done(() => {
-    var popin = $(templates.popin);
-    popin.find('.slide-in-bar').addClass('danger');
-    // console.log($(templates.popin).find('.slide-in-preview'));
-    $('body').append(popin);
-    $('.slide-in').hide();
-    $('.slide-in').slideDown();
+    showPopIn('Hello World', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, beatae!',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quidem culpa possimus nostrum assumenda sequi iure quod inventore minima quisquam. Alias modi eveniet adipisci, perspiciatis.',
+      'warning');
 
     registerListeners();
   });
@@ -49,4 +46,14 @@ function clickBody(event) {
   if (!$.contains($(event.target[0], $('.slide-in')[0]))) {
     $('.slide-in').remove();
   }
+}
+
+// Levels: warning, danger, severe
+function showPopIn(title, preview, content, level) {
+  var popIn = $(templates.popin);
+  popIn.find('.slide-in-preview > h1').text(title);
+  popIn.find('.slide-in-preview > p').text(preview);
+  popIn.find('.slide-in-content > p').text(content);
+  popIn.find('.slide-in-bar').addClass(level);
+  $('body').append(popIn);
 }
