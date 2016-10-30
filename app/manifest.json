@@ -5,7 +5,8 @@
   "description": "__MSG_appDescription__",
   "icons": {
     "16": "images/icon-16.png",
-    "128": "images/icon-128.png"
+    "128": "images/icon-128.png",
+    "256": "images/icon-256.png"
   },
   "default_locale": "en",
   "background": {
@@ -14,8 +15,9 @@
       "scripts/background.js"
     ]
   },
-  "permissions": [],
-  "browser_action":{
+  "browser_action": {
+    "default_icon": "images/icon-128.png",
     "default_popup": "popup.html"
-  }
+  },
+  "permissions": []
 }
