@@ -21,8 +21,8 @@
     "default_popup": "popup.html"
   },
   "content_scripts": [{
-    "js": ["bower_components/jquery/dist/jquery.min.js", "scripts/testpopbox.js"],
-    "matches": [ "http://*/*", "https://*/*" ]
+    "js": ["bower_components/jquery/dist/jquery.min.js", "scripts/testpopbox.js", "scripts/domwatcher.js"],
+    "matches": [ "<all_urls>" ]
   }],
   "permissions": [
     "storage",
