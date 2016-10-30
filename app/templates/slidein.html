@@ -1,4 +1,4 @@
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
 <style>
   .slide-in {
@@ -36,6 +36,15 @@
 
   .slide-in-bar.critical {
     background: rgba(0, 0, 0, 0.9);
+  }
+
+  .slide-in-close {
+    position: absolute;
+    content: '\00d7';
+    font-size: 14pt;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
   }
 
   .slide-in-preview {
@@ -83,7 +92,7 @@
   }
 
   .slide-in-see-more > p {
-    margin-top: 6px;
+    margin-top: 10px;
     margin-left: 6px;
 
     color: black;
@@ -91,6 +100,7 @@
     font-size: 12pt;
     font-weight: none;
     font-family: Josefin Sans;
+    text-align: left;
   }
 
   .slide-in-content {
@@ -104,6 +114,7 @@
 </style>
 
 <div class="slide-in">
+  <div class="slide-in-close">&times;</div>
   <div class="slide-in-bar"></div>
   <div class="slide-in-preview">
     <h1>Alert</h1>
@@ -113,9 +124,9 @@
     <p>More information...</p>
   </div>
 
-<!--   <div class="slide-in-content">
+  <div style="display: none;" class="slide-in-content">
     
-  </div> -->
+  </div>
 </div>
 
 <script>
