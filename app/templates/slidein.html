@@ -1,0 +1,132 @@
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<style>
+  .slide-in {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    position: fixed;
+    width: 400px;
+    top: 10px;
+    right: 10px;
+    /*bottom: 10px;*/
+
+    box-shadow: 2px 2px 3px #000;
+
+    z-index: 1000;
+  }
+
+  .slide-in-bar {
+    height: 5px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    background: rgba(0, 255, 255, 1.0);
+  }
+
+  .slide-in-bar.warning {
+    background: rgba(255, 255, 0, 0.9);
+  }
+
+  .slide-in-bar.danger {
+    background: rgba(255, 140, 0, 0.9);
+  }
+
+  .slide-in-bar.severe {
+    background: rgba(255, 0, 0, 0.9);
+  }
+
+  .slide-in-bar.critical {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .slide-in-preview {
+    padding: 8px;
+  }
+
+  h1 {
+    font-family: Josefin Sans;
+  }
+
+  .slide-in-preview > h1 {
+    font-size: 16pt;
+    font-family: Josefin Sans;
+    text-align: left;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 8px;
+
+    margin-top: 0;
+  }
+
+  .slide-in-preview > p {
+    font-size: 12pt;
+    font-family: Josefin Sans;
+    line-height: 120%;
+    text-align: left;
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .slide-in-preview:hover {
+    background: rgba(255, 255, 255, 1.0);
+  }
+
+  .slide-in-see-more {
+    border-top: 1px solid black;
+    height: 5vh;
+    cursor: pointer;
+  }
+
+  .slide-in-see-more:hover {
+    background: rgba(255, 255, 255, 1.0);
+    border-radius: 0 0 5px 5px;
+  }
+
+  .slide-in-see-more > p {
+    margin-top: 6px;
+    margin-left: 6px;
+
+    color: black;
+
+    font-size: 12pt;
+    font-weight: none;
+    font-family: Josefin Sans;
+  }
+
+  .slide-in-content {
+    height: 30vh;
+  }
+
+  .slide-in-content:hover {
+    background: rgba(255, 255, 255, 1.0);
+  }
+
+</style>
+
+<div class="slide-in">
+  <div class="slide-in-bar"></div>
+  <div class="slide-in-preview">
+    <h1>Alert</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, debitis?</p>
+  </div>
+  <div class="slide-in-see-more">
+    <p>More information...</p>
+  </div>
+
+<!--   <div class="slide-in-content">
+    
+  </div> -->
+</div>
+
+<script>
+  // $('.slide-in-content').hide();
+  // $('.slide-in-see-less').hide();
+
+  // $('.slide-in-see-more').on('click', () => {
+  //   $('.slide-in-preview').hide();
+  //   $('.slide-in-see-more').hide();
+
+  //   $('.slide-in-content').show();
+  //   $('.slide-in-see-less').show();
+  // });
+</script>
