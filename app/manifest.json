@@ -25,6 +25,7 @@
     "matches": [ "http://*/*", "https://*/*" ]
   }],
   "permissions": [
+    "storage",
     "tabs",
     "http://*/*"
   ],
