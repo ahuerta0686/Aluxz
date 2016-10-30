@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <meta charset = "utf-8">
     <title>HTML: Popup</title>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="scripts/popup.js"></script>
     <style>
       p {
-          color: hsl(0, 0%, 100%);
+          font-size: 12pt;
+          font-family: Josefin Sans;
+          color: hsl(0, 100%, 100%);
       }
 
       body {
-        background-color: hsl(74, 48%, 61%);
+        width:160px;
+        height:169px;
+        /*background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("images/popup-bg.png");*/
+        background-size: cover;
+        background-color: hsl(96, 53%, 0%);
       }
-
-      div.container {
-        width:300px;
-        height:35px;
+      #checkbox{
+        /*margin-top:100px;*/
+      }
+      #panicbutton{
+        margin-bottom:10px;
+      }
+      #extensionBox{
+        color: hsl(0, 100%, 100%);
+      }
+      .text-white{
+        color:white;
       }
     </style>
   </head>
   <body>
 
-    <div class="container"><p><strong>Careful, your computer might be at risk.</strong></p></div>
-    <div id="debug">
-      <button id="show-popup">Show Popup</button>
+    <div class="container-fluid row">
+    <img src="images/popup-bg.png" class="img-responsive">
+    <div class="col-sm-12 checkbox" id="checkbox">
+    <label>
+    <input type= "checkbox" name="extensionBox" checked>
+    <span id="extensionBox">Enable</span></label>
+  </div>
+  <div class="col-sm-12 text-center">
+    <button class="btn btn-sm btn-danger " id="panicbutton" type="button">Alert supervisor</button></div>
     </div>
+
+
+
 
 
   </body>

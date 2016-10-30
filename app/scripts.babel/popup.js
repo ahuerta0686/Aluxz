@@ -1,6 +1,9 @@
 $(document).ready(main);
-
+var extensionEnabled = false;
 function main() {
+  chrome.storage.sync.get('enabled',function(enabled){
+    extensionEnabled = enabled;
+  })
   registerListeners();
 }
 
