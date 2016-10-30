@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html><head>
-  <meta charset = "utf-8">
-  <title>HTML: Popup</title>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title>HTML: Popup</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/popup.js"></script>
+    <style>
+      p {
+          color: hsl(0, 0%, 100%);
+      }
 
-  <style>p {
-      color: hsl(0, 0%, 100%);
-  }
+      body {
+        background-color: hsl(74, 48%, 61%);
+      }
 
-  body {
-    background-color: hsl(74, 48%, 61%);
-  }
+      div.container {
+        width:300px;
+        height:35px;
+      }
+    </style>
+  </head>
+  <body>
 
-  div.container{width:300px;height:35px}</style></head><body>
-
-<div class="container"><p><strong>Careful, your computer might be at risk.</strong></p></div>
+    <div class="container"><p><strong>Careful, your computer might be at risk.</strong></p></div>
+    <div id="debug">
+      <button id="show-popup">Show Popup</button>
+    </div>
 
 
   </body>
-  </html>
+</html>
