@@ -7,17 +7,17 @@ var templates = {
 function main() {
   loadTemplates()
   .done(() => {
-    showPopIn('Hello World', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, beatae!',
+    /*showPopIn('Hello World', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, beatae!',
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quidem culpa possimus nostrum assumenda sequi iure quod inventore minima quisquam. Alias modi eveniet adipisci, perspiciatis.',
-      'warning');
+      'warning');*/
 
     registerListeners();
   });
 }
 
 function registerListeners() {
-  $('.slide-in-see-more').on('click', clickSlideInSeeMore);
-  $('.slide-in-close').on('click', clickSlideInClose);
+  $(document).on('click', '.slide-in-see-more', clickSlideInSeeMore);
+  $(document).on('click', '.slide-in-close', clickSlideInClose);
   // $('body').on('click', clickBody);
 }
 
